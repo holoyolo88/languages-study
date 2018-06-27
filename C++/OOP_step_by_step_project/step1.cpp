@@ -20,7 +20,7 @@ void menu()
 int createacnt(int now, acnt *ptrarr)
 {
 	cout << "[°èÁÂ °³¼³]\n";
-	(ptrarr+now) = (acnt*)malloc(sizeof(acnt));
+	//(ptrarr+now) = (acnt*)malloc(sizeof(acnt));
 	cin >> (ptrarr + now)->num >> (ptrarr + now)->name >> (ptrarr + now)->remain;
 	return now;
 }
@@ -80,7 +80,7 @@ int main(void)
 		case 1:
 			max = createacnt(i, arr);	break;
 		case 2:
-			deposit(max, arr);		break;
+			deposit(max, arr);			break;
 		case 3:
 			withdrawl(max, arr);		break;
 		case 4:
