@@ -4,8 +4,8 @@ var fs = require('fs');
 // : will be executed when someone tries to access the computer on port 8080
 // function : req argument represents the request from the client, as an object(http.IncomingMessage object)
 http.createServer(function (req, res) {
-    // writeFile() : replaces the specified file and content
-    fs.writeFile('file3.html','content',function(err){
+    // unlinkFile() :  deletes the specified file
+    fs.unlinkFile('file3.html','content',function(err){
     if(err) throw err;
     console.log('Saved!')  
     });  
