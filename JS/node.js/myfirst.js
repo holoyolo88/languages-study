@@ -6,8 +6,9 @@ var fs = require('fs');
 // : will be executed when someone tries to access the computer on port 8080
 // function : req argument represents the request from the client, as an object(http.IncomingMessage object)
 http.createServer(function (req, res) {
-    // open() : open file with a flag as a second argument('w')
-    fs.open('file2.html','w',function(err){
+    // writeFile() : replaces the specified file and content if it exists
+    // : If the file does not exist, a new file, containing the specified content
+    fs.writeFile('file3.html','content',function(err){
     if(err) throw err;
     console.log('Saved!')  
     });  
