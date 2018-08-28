@@ -1,13 +1,25 @@
-// bulilt-in Events module : create-, fire-, and listen for- events
-var events = require('events');
-// EventEmitter :  all event properties and methods are an instance of an EventEmitter object
-// : access these properties and methods
-var eventEmitter = new events.EventEmitter();
-// Create an event handler
-var myEventHandler = function () {
-    console.log('I hear a scream!');
-}
-// on() : assign the event handler to an event
-eventEmitter.on('scream', myEventHandler);
-//emit() : fire the 'scream' event
-eventEmitter.emit('scream');
+// Nodemailer Module : C:\Users\Your Name>npm install nodemailer
+// send emails from computer
+var nodemailer = require('nodemailer');
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'youremail@gmail.com',
+    pass: 'yourpassword'
+  }
+});
+var mailOptions = {
+  from: 'youremail@gmail.com',
+  to: 'myfriend@yahoo.com',
+  subject: 'Sending Email using Node.js',
+  text: 'That was easy!'
+};
+// sendMail() :sendMail
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
+
