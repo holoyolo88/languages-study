@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class CalcServlet
  */
-@WebServlet(description = "secondServlet", urlPatterns = { "/CalcServlet" })
-public class CalcServlet extends HttpServlet {
+@WebServlet(description = "secondServlet", urlPatterns = { "/CalcServlet2" })
+public class CalcServlet2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CalcServlet() {
+    public CalcServlet2() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -50,27 +50,13 @@ public class CalcServlet extends HttpServlet {
 		num2=Integer.parseInt(request.getParameter("num2"));
 		op=request.getParameter("operator");
 		
-		result = calc(num1,num2,op);
+		Calc calc = new Calc(num1,num2,op);
+		result = calc.getResult();
 		
 		out.println("<HTML>");
 		out.println("<HEAD><TITLE>Calculator</TITLE></HEAD>");
 		out.println("<BODY>result\n"+num1+op+num2+"="+result+"</BODY>");
 		out.println("</HTML>");
-	}
-	public int calc(int num1, int num2,String op) {
-		if(op.equals("+")) {
-			return num1+num2;
-		}
-		else if(op.equals("-")) {
-			return num1-num2;
-		}
-		else if(op.equals("*")) {
-			return num1*num2;
-		}
-		else if(op.equals("/")) {
-			return num1/num2;
-		}
-		return 0;
 	}
 
 }
