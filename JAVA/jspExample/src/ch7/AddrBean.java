@@ -1,4 +1,4 @@
-package jspExample.ch7;
+package ch7;
 
 public class AddrBean {
 	
