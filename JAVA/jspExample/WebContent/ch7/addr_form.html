@@ -5,27 +5,21 @@
 <title>주소록</title>
 </head>
 <body>
-<form name="form1" method="POST" action=addr_add.jsp>
-<table border =1 cellspacing="1" cellpadding="5">
-<tr>
-<td>이름</td>
-<td>
-<input type = "text" size = 20 name = "username" />
-</td>
-<td>전화번호</td>
-<td>
-<input type = "text" size = 20 name = "username" />
-</td>
-<td>이메일</td>
-<td>
-<input type = "text" size = 20 name = "username" />
-</td>
-</tr>
-<tr>
-<td colspan=2 align=center>
-<input type = "submit" value="확인" />
-<input type = "submit" value="취소" /></td></tr>
-</table>
-</form>
+	<form name="form1" method="POST" action=addr_add.jsp>
+		<table border=1 cellspacing="1" cellpadding="5">
+			<tr>
+				<td>이름</td>
+				<td><input type="text" size=20 name="username" /></td>
+				<td>전화번호</td>
+				<td><input type="text" size=20 name="tel" /></td>
+				<td>이메일</td>
+				<td><input type="text" size=20 name="email" /></td>
+			</tr>
+			<tr>
+				<td colspan=2 align=center><input type="submit" value="확인" />
+					<input type="submit" value="취소" /></td>
+			</tr>
+		</table>
+	</form>
 </body>
 </html>

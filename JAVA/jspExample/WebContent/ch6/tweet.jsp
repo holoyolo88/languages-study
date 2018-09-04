@@ -7,7 +7,7 @@ request.setCharacterEncoding("UTF-8");
 String msg = request.getParameter("msg");
 Object username = session.getAttribute("user");
 
-ArrayList<String> msgs = (ArrayList<String>) application.getAttribute("msgs");
+ArrayList<String> msgs = (ArrayList<String>)application.getAttribute("msgs");
 
 if(msgs == null){
 	msgs = new ArrayList<String>();
