@@ -1,0 +1,9 @@
+// 데이터베이스 목록 보기
+show databases;
+// 특정 데이터베이스의 테이블 보기
+show tables from 데이터베이스명;
+// 특정 데이터베이스 테이블의 컬럼 보기
+use 데이터베이스명;
+show columns from 테이블명;
+// characterset 등 모든 컬럼 보기
+show full columns from 테이블명;
